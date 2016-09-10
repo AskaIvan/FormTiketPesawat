@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
+import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
@@ -12,8 +13,9 @@ import android.widget.TextView;
 public class MainActivity extends AppCompatActivity {
     EditText etNama;
     Button bPesan;
-    TextView tvHasil, tvNama;
+    TextView tvHasil, tvNama, tvMakan;
     RadioGroup rgKelas;
+    CheckBox cbInt, cbInd, cbTra;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,16 +25,38 @@ public class MainActivity extends AppCompatActivity {
         etNama = (EditText) findViewById(R.id.editTextNama);
         bPesan = (Button) findViewById(R.id.btnPesan);
         rgKelas = (RadioGroup) findViewById(R.id.radioGroupKelas);
+        cbInt = (CheckBox) findViewById(R.id.checkBoxInter);
+        cbInd = (CheckBox) findViewById(R.id.checkBoxIndo);
+        cbTra = (CheckBox) findViewById(R.id.checkBoxTra);
         tvHasil = (TextView) findViewById(R.id.textViewHasil);
         tvNama = (TextView) findViewById(R.id.textViewNama);
+        tvMakan = (TextView) findViewById(R.id.textViewMakan);
         bPesan.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 doProcess();
                 doClick();
+                doMakan();
 
             }
         });
+    }
+
+    private void doMakan() {
+        String makan = "Makanan yang anda pilih:\n";
+        int startlen = makan.length();
+        if (cbInt.isChecked())
+            makan += cbInt.getText() + "\n";
+        if (cbInd.isChecked())
+            makan += cbInd.getText() + "\n";
+        if (cbTra.isChecked())
+            makan += cbTra.getText() + "\n";
+
+        if (makan.length() == startlen)
+            makan += "Tidak ada pada Pilihan";
+
+        tvHasil.setText(makan);
+
     }
 
     private void doClick() {
