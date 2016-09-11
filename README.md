@@ -4,9 +4,9 @@ makanan yang dipilih dan kelas yang dipilih.
 
 Screenshot
 
-![Image of Yaktocat](https://github.com/AskaIvan/FormTiketPesawat/blob/master/SS1.jpg)
-![Image of Yaktocat](https://github.com/AskaIvan/FormTiketPesawat/blob/master/SS2.jpg)
-![Image of Yaktocat](https://github.com/AskaIvan/FormTiketPesawat/blob/master/SS3.jpg)
+(https://docs.google.com/open?id=0B-Pbm1yiV-7QLTZ0cUwyRE5PYnc)
+(https://docs.google.com/open?id=0B-Pbm1yiV-7QMWhDRE95MXF1eEk)
+(https://docs.google.com/open?id=0B-Pbm1yiV-7QWEY2cGZLZDhac1E)
 
 Link file apk https://drive.google.com/open?id=0B-Pbm1yiV-7QMnk2Tllmem1PX00
 
