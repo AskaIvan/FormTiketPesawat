@@ -33,7 +33,7 @@
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true"
             android:layout_below="@+id/textViewNama"
-            android:text="Kelas"/>
+            tools:text="Kelas"/>
 
         <EditText
             android:id="@+id/editTextNama"
@@ -92,7 +92,7 @@
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true"
             android:layout_below="@+id/spinnerTujuan"
-            android:text="Makanan"/>
+            android:text="Makan"/>
 
         <TextView
             android:id="@+id/textView3"
@@ -159,7 +159,7 @@
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true"
             android:layout_below="@+id/btnPesan"
-            android:text="Nama"/>
+            tools:text="Nama"/>
 
         <TextView
             android:id="@+id/textViewMakan"

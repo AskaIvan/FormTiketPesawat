@@ -42,22 +42,7 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
-    private void doMakan() {
-        String makan = "Makanan yang anda pilih:\n";
-        int startlen = makan.length();
-        if (cbInt.isChecked())
-            makan += cbInt.getText() + "\n";
-        if (cbInd.isChecked())
-            makan += cbInd.getText() + "\n";
-        if (cbTra.isChecked())
-            makan += cbTra.getText() + "\n";
 
-        if (makan.length() == startlen)
-            makan += "Tidak ada pada Pilihan";
-
-        tvHasil.setText(makan);
-
-    }
 
     private void doClick() {
         String hasil = null;
@@ -68,7 +53,7 @@ public class MainActivity extends AppCompatActivity {
         if (hasil == null) {
             tvHasil.setText("Belum memilih Kelas");
         } else {
-            tvHasil.setText("Kelas Anda : " + hasil);
+            tvHasil.setText("Kelas Anda : " + hasil + "\n");
         }
 
     }
@@ -91,5 +76,22 @@ public class MainActivity extends AppCompatActivity {
             etNama.setError(null);
         }
         return valid;
+    }
+
+    private void doMakan() {
+        String makan = "Makanan yang anda pilih:\n";
+        int startlen = makan.length();
+        if (cbInt.isChecked())
+            makan += cbInt.getText() + "\n";
+        if (cbInd.isChecked())
+            makan += cbInd.getText() + "\n";
+        if (cbTra.isChecked())
+            makan += cbTra.getText() + "\n";
+
+        if (makan.length() == startlen)
+            makan += "Tidak ada pada Pilihan";
+
+        tvMakan.setText(makan);
+
     }
 }
