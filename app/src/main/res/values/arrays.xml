@@ -1,3 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string-array name="AT">
+        <item>Jakarta</item>
+        <item>Makassar</item>
+        <item>Medan</item>
+        <item>Surabaya</item>
+        <item>Yogyakarta</item>
+        <item>Bali</item>
+    </string-array>
 </resources>

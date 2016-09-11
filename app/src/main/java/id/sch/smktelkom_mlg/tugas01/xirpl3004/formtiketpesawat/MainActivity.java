@@ -8,14 +8,16 @@ import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
+import android.widget.Spinner;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
     EditText etNama;
     Button bPesan;
-    TextView tvHasil, tvNama, tvMakan;
+    TextView tvHasil, tvNama, tvMakan, tvAsal, tvTujuan;
     RadioGroup rgKelas;
     CheckBox cbInt, cbInd, cbTra;
+    Spinner spAsal, spTujuan;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,13 +30,18 @@ public class MainActivity extends AppCompatActivity {
         cbInt = (CheckBox) findViewById(R.id.checkBoxInter);
         cbInd = (CheckBox) findViewById(R.id.checkBoxIndo);
         cbTra = (CheckBox) findViewById(R.id.checkBoxTra);
+        spAsal = (Spinner) findViewById(R.id.spinnerAsal);
+        spTujuan = (Spinner) findViewById(R.id.spinnerTujuan);
         tvHasil = (TextView) findViewById(R.id.textViewHasil);
         tvNama = (TextView) findViewById(R.id.textViewNama);
         tvMakan = (TextView) findViewById(R.id.textViewMakan);
+        tvAsal = (TextView) findViewById(R.id.textViewAsal);
+        tvTujuan = (TextView) findViewById(R.id.textViewTujuan);
         bPesan.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 doProcess();
+                doTA();
                 doClick();
                 doMakan();
 
@@ -42,6 +49,10 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
+    private void doTA() {
+        tvAsal.setText("Keberangkatan : " + spAsal.getSelectedItem().toString() + "\n");
+        tvTujuan.setText("Tujuan : " + spTujuan.getSelectedItem().toString() + "\n");
+    }
 
 
     private void doClick() {
